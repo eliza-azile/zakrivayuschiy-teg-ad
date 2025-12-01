@@ -90,7 +90,7 @@
   text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff;
 }
 
-@suuports ((text-stroke: 1px white) or (-webkit-text-stroke: 1px white)) {
+@supports ((text-stroke: 1px white) or (-webkit-text-stroke: 1px white)) {
   .card__img-text {
     -webkit-text-stroke: 1px white;
     text-stroke: 1px white;
@@ -167,6 +167,10 @@
   font-family: var(--accent_font-family);
   font-size: 14px;
   line-height: 0.9;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  mix-blend-mode: difference;
 }
 
 .dialog[open] {
@@ -290,13 +294,6 @@
 .btn__save:hover::before,
 .dialog__close-btn:hover::before {
   transform: scaleX(1);
-}
-
-.button__text {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  mix-blend-mode: difference;
 }
 
 .save__img {
